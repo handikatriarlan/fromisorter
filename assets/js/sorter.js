@@ -266,6 +266,14 @@ function showResult() {
   const tweetBtn = document.getElementById("tweet-button");
   tweetBtn.style.display = "inline";
   tweetBtn.href = `https://twitter.com/intent/tweet?text=${shareText}`;
+
+  const resetBtn = document.getElementById("reset-button");
+  resetBtn.style.display = "inline";
+
+  resetBtn.addEventListener('click', function () {
+    location.reload();
+  });
+
 }
 
 function showFinal() {
