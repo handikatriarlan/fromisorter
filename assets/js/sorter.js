@@ -242,9 +242,10 @@ function showResult() {
   for (i = 0; i < namMember.length; i++) {
     const mem = namMember[lstMember[0][i]];
     const disp = `${mem}${memberEmoji[mem]}`;
-    listResult.push(disp);
 
-    str += "<li><span class='number'>" + ranking + "</span> " + disp + "</li>";
+    const paddedRank = ranking.toString().padStart(1);
+
+    str += "<li><span class='number'>" + paddedRank + "</span> " + disp + "</li>";
 
     if (i < namMember.length - 1) {
       if (equal[lstMember[0][i]] == lstMember[0][i + 1]) {
@@ -254,6 +255,7 @@ function showResult() {
         sameRank = 1;
       }
     }
+    listResult.push(`${paddedRank}. ${disp}`);
   }
 
   str += "</ul>";
