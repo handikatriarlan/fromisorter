@@ -179,6 +179,7 @@ h2 {
 }
 
 @media screen and (min-width: 700px) {
+
   .sorter-option#optionA,
   .sorter-option#optionB {
     width: 45%;
@@ -247,4 +248,10 @@ h2 {
   background: #fff;
   width: 300px;
   border-radius: 1em;
+}
+
+@media screen and (max-width: 500px) {
+  .member-name {
+    font-size: 14px;
+  }
 }
